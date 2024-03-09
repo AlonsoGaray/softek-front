@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Resumen() {
   return (
     <div className="grid h-14 grid-cols-4 items-center md:grid-cols-12">

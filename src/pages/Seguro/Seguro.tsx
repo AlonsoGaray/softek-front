@@ -52,10 +52,10 @@ function Seguro() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex justify-between">
+      <div className="flex justify-between gap-2">
         <div className="flex flex-col justify-center gap-2">
           <Badge>Seguro Salud Flexible</Badge>
-          <h2 className="max-w-48 text-3xl font-bold leading-9 md:max-w-72">
+          <h2 className="max-w-52 text-3xl font-bold leading-9 md:max-w-72">
             Creado para ti y tu familia
           </h2>
         </div>
@@ -65,8 +65,7 @@ function Seguro() {
             className="rounded-2xl"
             src={FamiliaMobil}
             alt="Foto familia feliz"
-            width={200}
-            height={200}
+            width={180}
           />
         </div>
       </div>
@@ -103,8 +102,10 @@ function Seguro() {
                 }
               />
             </div>
-            {errors.documentNumber ? <p className="error">Requerido</p> : null}
           </div>
+          {errors.documentNumber ? (
+            <p className="text-red-500">Requerido</p>
+          ) : null}
 
           <input
             type="text"
@@ -115,6 +116,9 @@ function Seguro() {
             placeholder="Celular"
             className="h-full w-full rounded-lg border border-[#5E6488] p-4"
           />
+          {errors.phoneNumber ? (
+            <p className="text-red-500">Requerido</p>
+          ) : null}
 
           <div className="flex w-full justify-start gap-3">
             <Controller
@@ -153,6 +157,13 @@ function Seguro() {
           <a className="underline" href="https://google.com" target="_blank">
             Aplican Terminos y Condiciones
           </a>
+
+          <button
+            type="submit"
+            className="mt-4 rounded-[40px] bg-[#03050F] py-5 text-xl font-bold text-white"
+          >
+            Cotiza aqui
+          </button>
         </form>
       </div>
     </div>

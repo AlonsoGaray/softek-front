@@ -4,8 +4,8 @@ import Footer from '../../components/Footer/Footer';
 
 function Layout() {
   return (
-    <div>
-      <div className="px-8">
+    <div className="flex min-h-screen flex-col ">
+      <div className="flex-grow px-8">
         <Header />
         <Outlet />
       </div>
