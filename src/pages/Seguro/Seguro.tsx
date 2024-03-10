@@ -4,7 +4,7 @@ import FamiliaDesktop from '../../assets/familia-desktop.png';
 import Badge from '../../components/Badge';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { Paths } from '../../utils/constants';
+import { paths } from '../../utils/constants';
 
 enum DocumentTypeEnum {
   dni = 'dni',
@@ -31,7 +31,7 @@ function Seguro() {
   const selectedDocumentType = watch('documentType');
   const navigate = useNavigate();
 
-  const onSubmit: SubmitHandler<IFormInput> = () => navigate(Paths.PLANES);
+  const onSubmit: SubmitHandler<IFormInput> = () => navigate(paths.PLANES);
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     const re = /^[0-9\b]+$/;
