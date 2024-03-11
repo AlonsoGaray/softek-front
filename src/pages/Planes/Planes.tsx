@@ -3,7 +3,7 @@
 import 'swiper/css';
 
 import { differenceInYears, parse } from 'date-fns';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
