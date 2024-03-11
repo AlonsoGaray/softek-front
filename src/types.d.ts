@@ -10,3 +10,11 @@ export interface User {
   lastName: string;
   birthDay: string;
 }
+
+export type ToggleGroupItemType = {
+  value: string;
+  ariaLabel: string;
+  iconSrc: string;
+  title: string;
+  description: string;
+};

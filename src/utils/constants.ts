@@ -1,5 +1,6 @@
 import ParaFamiliarIcon from '@/assets/para-familiar.svg';
 import ParaMiIcon from '@/assets/para-mi.svg';
+import { ToggleGroupItemType } from '@/types';
 
 export const BASE_API_URL = import.meta.env.VITE_BASE_API_URL;
 
@@ -9,7 +10,7 @@ export const paths = {
   RESUMEN: '/resumen',
 };
 
-export const toggleGroupData = [
+export const toggleGroupData: ToggleGroupItemType[] = [
   {
     value: 'para-mi',
     ariaLabel: 'Toggle para mi',
