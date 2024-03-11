@@ -23,8 +23,9 @@ function Planes() {
 
   const [plans, setPlans] = useState<Plan[]>([]);
   const [user, setUser] = useState<User | undefined>(undefined);
-  const [currentPage, setCurrentPage] = useState<number>(1);
   const [selectedValue, setSelectedValue] = useState<string>('');
+  const [firstPage, setFirstPage] = useState<boolean>(true);
+  const [lastPage, setLastPage] = useState<boolean>(false);
 
   const swiperLeftRef: any = useRef(null);
   const swiperRightRef: any = useRef(null);
@@ -45,7 +46,8 @@ function Planes() {
   }, []);
 
   const handleSlideChange = (swiper: any) => {
-    setCurrentPage(swiper.realIndex + 1);
+    setFirstPage(swiper.isBeginning);
+    setLastPage(swiper.isEnd);
   };
 
   const isPlanClinica = (name: string) => {
@@ -131,10 +133,13 @@ function Planes() {
           <Swiper
             spaceBetween={16}
             className="flex max-w-full flex-col items-center"
-            pagination={{ el: '.swiper-pagination', clickable: true }}
+            pagination={{
+              el: '.pagination',
+              type: 'fraction',
+            }}
             navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+              nextEl: '.button-next',
+              prevEl: '.button-prev',
             }}
             modules={[Pagination, Navigation]}
             onSlideChange={handleSlideChange}
@@ -211,35 +216,24 @@ function Planes() {
               ))}
 
             <div className="flex items-center gap-4 pt-6">
-              <div
-                className="swiper-button-prev cursor-pointer"
-                ref={swiperLeftRef}
-              >
+              <div className="button-prev cursor-pointer" ref={swiperLeftRef}>
                 <Arrow
-                  color={currentPage === 1 ? '#A9AFD9' : '#4F4FFF'}
+                  color={firstPage ? '#A9AFD9' : '#4F4FFF'}
                   height="30"
                   width="30"
                 />
               </div>
 
-              <div>
-                <span>{currentPage}</span>
-                <span> / </span>
-                <span>{plans.length}</span>
-              </div>
+              <div className="pagination"></div>
 
-              <div
-                className="swiper-button-next cursor-pointer"
-                ref={swiperRightRef}
-              >
+              <div className="button-next cursor-pointer" ref={swiperRightRef}>
                 <Arrow
                   height="30"
                   width="30"
                   rotate
-                  color={currentPage === plans.length ? '#A9AFD9' : '#4F4FFF'}
+                  color={lastPage ? '#A9AFD9' : '#4F4FFF'}
                 />
               </div>
-              <div className="swiper-pagination"></div>
             </div>
           </Swiper>
         )}
