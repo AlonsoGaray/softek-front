@@ -1,5 +1,7 @@
-import ParaMiIcon from '../assets/para-mi.svg';
 import ParaFamiliarIcon from '../assets/para-familiar.svg';
+import ParaMiIcon from '../assets/para-mi.svg';
+
+export const BASE_API_URL = import.meta.env.VITE_BASE_API_URL;
 
 export const paths = {
   HOME: '/',
@@ -17,10 +19,10 @@ export const toggleGroupData = [
       'Cotiza tu seguro de salud y agrega familiares si así lo deseas.',
   },
   {
-    value: 'para-familiar',
-    ariaLabel: 'Toggle para familiar',
+    value: 'para-alguien',
+    ariaLabel: 'Toggle para alguien mas',
     iconSrc: ParaFamiliarIcon,
-    title: 'Para familiar',
+    title: 'Para alguien mas',
     description:
       'Realiza una cotización para uno de tus familiares o cualquier persona.',
   },
