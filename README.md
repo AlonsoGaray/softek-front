@@ -58,11 +58,15 @@ Para obtener una version local del proyecto, solo seguir estos pasos:
    ```sh
    npm install
    ```
-3. Ejecutar proyecto
+3. Crear archivo .env en la ruta del proyecto y agregar lo siguiente
+   ```sh
+   VITE_BASE_API_URL = https://rimac-front-end-challenge.netlify.app/api
+   ```
+4. Ejecutar proyecto
    ```sh
    npm run dev
    ```
-4. Entrar a la siguiente url para visualizarlo en vivo
+5. Entrar a la siguiente url para visualizarlo en vivo
    ```
    http://localhost:5173/
    ```
