@@ -16,8 +16,8 @@ interface PlanSlideProps {
 }
 
 const PlanSlide = ({ plan, selectedValue, navigate }: PlanSlideProps) => {
-  const [selectedPlan, setSelectedPlan] = useLocalStorage('selectedPlan', '');
-  const [selectedOption, setSelectedOption] = useLocalStorage(
+  const [_selectedPlan, setSelectedPlan] = useLocalStorage('selectedPlan', '');
+  const [_selectedOption, setSelectedOption] = useLocalStorage(
     'selectedOption',
     '',
   );
