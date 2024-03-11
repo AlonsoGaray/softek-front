@@ -3,10 +3,21 @@ interface Props {
   width: string;
   height: string;
   rotate?: boolean;
+  classProps?: string;
+  onClick?: () => void;
 }
 
-export const Arrow = ({ color, width, height, rotate }: Props) => (
+export const Arrow = ({
+  color,
+  width,
+  height,
+  rotate,
+  classProps,
+  onClick,
+}: Props) => (
   <svg
+    className={classProps}
+    onClick={onClick}
     width={width}
     height={height}
     viewBox="0 0 24 24"

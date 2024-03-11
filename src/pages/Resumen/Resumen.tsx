@@ -1,9 +1,9 @@
-import { Arrow } from '@/assets/icons/arrow';
 import { Family } from '@/assets/icons/famili-icon';
+import GoBack from '@/components/GoBack';
 
 function Resumen() {
   return (
-    <div className="mt-8 flex w-full flex-col items-center">
+    <div className="flex w-full flex-col items-center">
       <div className="hidden w-full items-center justify-center gap-4 bg-[#EDEFFC] py-4 md:flex">
         <div className="flex h-6 w-6 items-center justify-center rounded-full border border-[#7981B2] text-[#7981B2]">
           1
@@ -20,11 +20,8 @@ function Resumen() {
         <span className="font-semibold">Resumen</span>
       </div>
 
-      <div className="flex w-full max-w-[336px] flex-col gap-8 md:max-w-[928px]">
-        <div className="hidden items-center gap-2 md:flex">
-          <Arrow color="#4F4FFF" height="20" width="20" />
-          <span className="text-lg font-semibold text-[#4F4FFF]">Volver</span>
-        </div>
+      <div className="mt-10 flex w-full max-w-[336px] flex-col gap-8 md:max-w-[928px]">
+        <GoBack />
 
         <h2 className="text-center text-3xl font-semibold md:text-left">
           Resumen del seguro

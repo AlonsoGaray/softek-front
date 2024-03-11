@@ -1,5 +1,5 @@
-import Logo from '../../assets/logo-header.svg';
-import Phone from '../../assets/phone.svg';
+import Logo from '@/assets/logo-header.svg';
+import Phone from '@/assets/phone.svg';
 
 function Header() {
   return (

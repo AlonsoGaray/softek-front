@@ -1,10 +1,11 @@
 import { ChangeEvent, useState } from 'react';
-import FamiliaMobil from '../../assets/familia-mobil.png';
-import FamiliaDesktop from '../../assets/familia-desktop.png';
-import Badge from '../../components/Badge';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { paths } from '../../utils/constants';
+
+import FamiliaDesktop from '@/assets/familia-desktop.png';
+import FamiliaMobil from '@/assets/familia-mobil.png';
+import Badge from '@/components/Badge';
+import { paths } from '@/utils/constants';
 
 enum DocumentTypeEnum {
   dni = 'dni',
