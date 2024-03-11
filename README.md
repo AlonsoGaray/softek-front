@@ -22,7 +22,7 @@
 ## Acerca del proyecto
 
 [Softek Reto](https://softek-reto-frontend.netlify.app/)
-![alt text](https://raw.githubusercontent.com/AlonsoGaray/softek-front/main/src/assets/images/Project.png)
+![alt text](https://raw.githubusercontent.com/AlonsoGaray/softek-front/main/src/assets/images/Proyecto.png)
 
 Proyecto realizado para el reto tecnico de la empresa Softek. Tuvo una duracion de 3 dias maximo para entrega.
 
