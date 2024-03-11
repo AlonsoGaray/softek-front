@@ -1,30 +1,78 @@
-# React + TypeScript + Vite
+# Rimac Seguros - Reto tecnico de Softek
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<details>
+  <summary>Tablero de contenido</summary>
+  <ol>
+    <li>
+      <a href="#acerca-del-proyecto">Acerca del proyecto</a>
+      <ul>
+        <li><a href="#creado-con">Creado con</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#levantar-proyecto">Levantar proyecto</a>
+      <ul>
+        <li><a href="#instalacion">Instalacion</a></li>
+      </ul>
+    </li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ol>
+</details>
 
-Currently, two official plugins are available:
+## Acerca del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Softek Reto](https://softek-reto-frontend.netlify.app/)
+![alt text](https://raw.githubusercontent.com/AlonsoGaray/softek-front/main/src/assets/images/Project.png)
 
-## Expanding the ESLint configuration
+Proyecto realizado para el reto tecnico de la empresa Softek. Tuvo una duracion de 3 dias maximo para entrega.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Creado con
 
-- Configure the top-level `parserOptions` property like this:
+Lista de frameworks y librerias que fueron usados para el proyecto:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- [React.js](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind](https://tailwindcss.com/)
+- [Swiper](https://swiperjs.com/) -> Para el slider de los planes
+- [react-hook-form](https://react-hook-form.com/) -> Para el formulario de cliente y su debida validacion
+- [react-router-dom](https://reactrouter.com/en/main) -> Para la navegacion entre paginas
+- [Shadcn](https://ui.shadcn.com/) -> Para las opciones de cotizacion
+- [date-fns](https://date-fns.org/) -> Para calcular la edad del usuario para filtrar los planes
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Typescript](https://www.typescriptlang.org/)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Levantar proyecto
+
+Para obtener una version local del proyecto, solo seguir estos pasos:
+
+### Instalacion
+
+1. Clonar repositorio
+   ```sh
+   git clone https://github.com/AlonsoGaray/softek-front.git
+   ```
+2. Instalar todos los paquetes necesarios
+   ```sh
+   npm install
+   ```
+3. Ejecutar proyecto
+   ```sh
+   npm run dev
+   ```
+4. Entrar a la siguiente url para visualizarlo en vivo
+   ```
+   http://localhost:5173/
+   ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contacto
+
+Alonso Garay - alonsogarayp@gmail.com
+
+Frontend Github Link: [https://github.com/AlonsoGaray/softek-front.git](https://github.com/AlonsoGaray/softek-front.git)
+
+<p align="right">(<a href="#top">back to top</a>)</p>

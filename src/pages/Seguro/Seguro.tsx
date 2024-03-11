@@ -3,8 +3,8 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
-import FamiliaDesktop from '@/assets/familia-desktop.png';
-import FamiliaMobil from '@/assets/familia-mobil.png';
+import FamiliaDesktop from '@/assets/images/familia-desktop.png';
+import FamiliaMobil from '@/assets/images/familia-mobil.png';
 import Badge from '@/components/Badge';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { paths } from '@/utils/constants';

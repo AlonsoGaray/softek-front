@@ -1,5 +1,5 @@
-import ParaFamiliarIcon from '@/assets/para-familiar.svg';
-import ParaMiIcon from '@/assets/para-mi.svg';
+import ParaFamiliarIcon from '@/assets/icons/para-familiar.svg';
+import ParaMiIcon from '@/assets/icons/para-mi.svg';
 import { ToggleGroupItemType } from '@/types';
 
 export const BASE_API_URL = import.meta.env.VITE_BASE_API_URL;
