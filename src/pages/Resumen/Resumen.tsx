@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { Family } from '@/assets/icons/famili-icon';
 import GoBack from '@/components/GoBack';
+import Steps from '@/components/Steps';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { paths } from '@/utils/constants';
 
@@ -23,21 +24,12 @@ function Resumen() {
 
   return (
     <div className="flex w-full flex-col items-center">
-      <div className="hidden w-full items-center justify-center gap-4 bg-[#EDEFFC] py-4 md:flex">
-        <div className="flex h-6 w-6 items-center justify-center rounded-full border border-[#7981B2] text-[#7981B2]">
-          1
-        </div>
-        <span className="font-semibold text-[#7981B2]">
-          Planes y coberturas
-        </span>
-
-        <div className="h-fit w-10 border-b-2 border-t-2 border-dashed border-[#7981B2]"></div>
-
-        <div className="flex h-6 w-6 items-center justify-center rounded-full border border-neutral-500 bg-[#4F4FFF] text-white">
-          2
-        </div>
-        <span className="font-semibold">Resumen</span>
-      </div>
+      <Steps
+        color1="#7981B2"
+        text1="Planes y coberturas"
+        color2="#4F4FFF"
+        text2="Resumen"
+      />
 
       <div className="mt-10 flex w-full max-w-[336px] flex-col gap-8 md:max-w-[928px]">
         <GoBack
