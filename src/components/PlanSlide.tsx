@@ -29,8 +29,9 @@ const PlanSlide = ({ plan, selectedValue, navigate }: PlanSlideProps) => {
       .toLowerCase()
       .includes('clinica');
   };
+
   return (
-    <div className="flex h-[600px] flex-col gap-6 rounded-3xl border px-8 py-10 shadow-lg shadow-slate-400">
+    <div className="mx-auto flex h-[600px] max-w-[490px] flex-col gap-6 rounded-3xl border px-8 py-10 shadow-lg shadow-slate-400">
       <div className="flex flex-col">
         {isPlanClinica(plan.name) && (
           <Badge extraClass="text-xs">Plan recomendado</Badge>

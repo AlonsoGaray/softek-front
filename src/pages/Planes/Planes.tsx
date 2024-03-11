@@ -75,7 +75,7 @@ function Planes() {
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-center gap-4 border-b border-b-[#D7DBF5] py-4 md:hidden">
         <Arrow
-          color="#A9AFD9"
+          color="#4F4FFF"
           height="30"
           width="30"
           onClick={() => {
@@ -85,7 +85,11 @@ function Planes() {
           classProps="cursor-pointer"
         />
         <span className="whitespace-nowrap font-bold">PASO 1 DE 2</span>
-        <div className="h-1.5 w-full rounded bg-[#D7DBF5]"></div>
+
+        <div className="flex h-1.5 w-full">
+          <div className="h-full w-1/2 rounded bg-[#4F4FFF]"></div>
+          <div className="h-full w-1/2 rounded bg-[#D7DBF5]"></div>
+        </div>
       </div>
 
       <Steps
