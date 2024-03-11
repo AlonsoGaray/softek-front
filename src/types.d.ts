@@ -4,3 +4,9 @@ export interface Plan {
   description: string[];
   age: number;
 }
+
+export interface User {
+  name: string;
+  lastName: string;
+  birthDay: string;
+}

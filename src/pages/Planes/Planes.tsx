@@ -14,23 +14,34 @@ import Badge from '@/components/Badge';
 import GoBack from '@/components/GoBack';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { getPlans } from '@/services/plan';
-import { Plan } from '@/types';
+import { getUser } from '@/services/user';
+import { Plan, User } from '@/types';
 import { paths, toggleGroupData } from '@/utils/constants';
 
 function Planes() {
   const navigate = useNavigate();
+
   const [plans, setPlans] = useState<Plan[]>([]);
+  const [user, setUser] = useState<User | undefined>(undefined);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [selectedValue, setSelectedValue] = useState<string>('');
+
   const swiperLeftRef: any = useRef(null);
   const swiperRightRef: any = useRef(null);
-  const [selectedValue, setSelectedValue] = useState<string>('');
 
   useEffect(() => {
     async function getPlansFunc() {
       const response = await getPlans();
       setPlans(response);
     }
+
+    async function getUserFunc() {
+      const response = await getUser();
+      setUser(response);
+    }
+
     getPlansFunc();
+    getUserFunc();
   }, []);
 
   const handleSlideChange = (swiper: any) => {
@@ -78,7 +89,7 @@ function Planes() {
         <div className="mx-auto flex flex-col gap-4 text-center md:max-w-[544px]">
           <div className="flex flex-col gap-2 ">
             <span className="text-3xl font-bold md:text-4xl ">
-              Rocio ¿Para quien deseas cotizar?
+              {user?.name} ¿Para quien deseas cotizar?
             </span>
 
             <span>

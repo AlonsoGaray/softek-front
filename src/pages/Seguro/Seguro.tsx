@@ -56,7 +56,7 @@ function Seguro() {
   };
 
   return (
-    <div className="flex flex-col gap-6 md:flex-row md:gap-24 lg:gap-32">
+    <div className="flex flex-col justify-center gap-6 md:flex-row md:gap-24 lg:gap-32">
       <div className="hidden md:flex">
         <img
           className="rounded-2xl"
