@@ -65,18 +65,18 @@ function Planes() {
         <div className="h-1.5 w-full rounded bg-[#D7DBF5]"></div>
       </div>
 
-      <div className="flex w-full items-center justify-center gap-4 bg-[#EDEFFC] py-4">
+      <div className="hidden w-full items-center justify-center gap-4 bg-[#EDEFFC] py-4 md:flex">
         <div className="flex h-6 w-6 items-center justify-center rounded-full border border-neutral-500 bg-[#4F4FFF] text-white">
           1
         </div>
-        <span>Planes y coberturas</span>
+        <span className="font-semibold">Planes y coberturas</span>
 
-        <div className="h-fit w-10 border-b-2 border-t-2 border-dashed border-[#7981B2]"></div>
+        <div className="h-fit w-10 border-b-2 border-t-2 border-dashed border-[#4F4FFF]"></div>
 
-        <div className="flex h-6 w-6 items-center justify-center rounded-full border border-neutral-500 bg-[#7981B2] text-white">
+        <div className="flex h-6 w-6 items-center justify-center rounded-full border border-[#7981B2] text-[#7981B2]">
           2
         </div>
-        <span>Resumen</span>
+        <span className="font-semibold text-[#7981B2]">Resumen</span>
       </div>
 
       <div className="mx-auto flex flex-col gap-4 text-center md:max-w-[544px]">
@@ -142,7 +142,7 @@ function Planes() {
           {plans.length > 0 &&
             plans?.map((plan) => (
               <SwiperSlide key={plan.name} className="flex flex-col">
-                <div className="flex h-[600px] flex-col gap-6 rounded-3xl border px-8 py-10">
+                <div className="flex h-[600px] flex-col gap-6 rounded-3xl border px-8 py-10 shadow-lg shadow-slate-400">
                   <div className="flex flex-col">
                     {isPlanClinica(plan.name) && (
                       <Badge extraClass="text-xs">Plan recomendado</Badge>
